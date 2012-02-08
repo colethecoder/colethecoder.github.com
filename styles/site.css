@@ -3,9 +3,23 @@ body
 	font-family: calibri,tahoma,arial,sans-serif;	
 }
 
+a.title-link
+{
+	color: #666 !important;
+	text-decoration: none;
+}
+
 .description
 {
 	margin-left:10px;
 	color:grey;
 	font-weight:500;
 }
+
+.date
+{
+	color: black;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
