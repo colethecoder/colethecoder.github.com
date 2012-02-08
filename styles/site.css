@@ -1,7 +1,11 @@
+body
+{
+	font-family: calibri,tahoma,arial,sans-serif;	
+}
+
 .description
 {
 	margin-left:10px;
 	color:grey;
 	font-weight:500;
-	font-family: calibri,tahoma,arial,sans-serif;
 }
