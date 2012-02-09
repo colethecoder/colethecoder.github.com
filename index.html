@@ -14,14 +14,14 @@ title: Cole The Coder
 	    {% if paginator.previous_page == 1 %}
 	      <a href="/">&lArr; Previous Page</a>
 	    {% else %}
-	      <a href="/page">&lArr; Previous Page</a>
+	      <a href="/page{{ paginator.previous_page }}">&lArr; Previous Page</a>
 	    {% endif %}
 	  {% endif %}
 
 	  Page {{ paginator.page }} of {{ paginator.total_pages }}
 
 	  {% if paginator.next_page %}
-	    <a href="/page">Next Page &rArr;</a>
+	    <a href="/page{{ paginator.next_page }}">Next Page &rArr;</a>
 	  {% endif %}
 	</section>
   </div>
