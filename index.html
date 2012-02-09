@@ -6,7 +6,7 @@ title: Cole The Coder
 <div class="content">
   <div class="related">
       {% for post in site.posts %}
-	<span class="date">{{ post.date | date: "%B %e, %Y" }}</span><br/><a href="{{ post.url }}" class="title-link">{{ post.title }}</a><br/>
+	<a href="{{ post.url }}" class="title-link">{{ post.title }}</a><br/><span class="date">{{ post.date | date: "%B %e, %Y" }}</span><br/>
 	<div>{{ post.content }}</div>
       {% endfor %}
   </div>

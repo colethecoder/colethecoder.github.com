@@ -5,9 +5,9 @@ body
 
 a.title-link
 {
-	color: #666;
-	text-decoration: none;
+	color: black;
 	font-size: 21px;
+	font-weight: bold;
 }
 
 .description
@@ -19,8 +19,7 @@ a.title-link
 
 .date
 {
-	color: black;
+	color: #666;
 	margin-bottom: 10px;
-	font-weight: bold;
 }
 
