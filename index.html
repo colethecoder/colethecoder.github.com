@@ -9,20 +9,18 @@ title: Cole The Coder
 	<a href="{{ post.url }}" class="title-link">{{ post.title }}</a><br/><span class="date">{{ post.date | date: "%B %e, %Y" }}</span><br/>
 	<div>{{ post.content }}</div>
       {% endfor %}
-	<section id="paging">
-	  {% if paginator.previous_page %}
-	    {% if paginator.previous_page == 1 %}
-	      <a href="/">&lArr; Previous Page</a>
-	    {% else %}
-	      <a href="/page{{ paginator.previous_page }}">&lArr; Previous Page</a>
+	<nav id="pagination">
+	    {% if paginator.previous_page %}
+	      {% if paginator.previous_page == 1 %}
+	      <a href="/" title="Previous Page">&laquo; Previous</a>
+	      {% else %}
+	      <a href="/page{{ paginator.previous_page }}/" title="Previous Page">&laquo; Previous</a>
+	      {% endif %}
 	    {% endif %}
-	  {% endif %}
 
-	  Page {{ paginator.page }} of {{ paginator.total_pages }}
-
-	  {% if paginator.next_page %}
-	    <a href="/page{{ paginator.next_page }}">Next Page &rArr;</a>
-	  {% endif %}
-	</section>
+	    {% if paginator.next_page %} 
+	    <a href="/page{{ paginator.next_page }}/" title="Next Page">Next &raquo;</a>
+	    {% endif %} 
+	  </nav>
   </div>
 
