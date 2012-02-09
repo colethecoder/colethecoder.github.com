@@ -23,4 +23,25 @@ a.title-link
 	color: #666;
 	margin-bottom: 10px;
 }
-
+#content
+{
+	position: absolute;
+	margin-right: 20px;
+	margin-left: 230px;
+	margin-bottom: 20px;
+	width: 70%;
+}
+#container
+{
+	position: absolute;
+	margin-right: 20px;
+	margin-left: 230px;
+	margin-bottom: 20px;
+	width: 70%;
+}
+#links
+{
+	font-size: 90%;
+	padding: 15px;
+	width: 208px;
+}
