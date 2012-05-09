@@ -1,6 +1,4 @@
-auto: true
-markdown: rdiscount
+# Jekyll
 permalink: /:year/:month/:day/:title
-paginate: 1
-rdiscount
-  extensions: [smart]
+paginate: 4
+exclude:
