@@ -1,6 +1,4 @@
 auto: true
-site:
-	url_root: "http://www.colethecoder.com"
 markdown: rdiscount
 permalink: /:year/:month/:day/:title
 paginate: 3
