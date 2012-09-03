@@ -9,19 +9,6 @@ title: Cole The Coder
            <p>{{ post.content }}</p>          
         </div>
 		{% endfor %}
-		<nav id="pagination" class="span2 offset10">
-		    {% if paginator.previous_page %}
-		      {% if paginator.previous_page == 1 %}
-		      <a href="/" title="Previous Page">&laquo; Previous</a>
-		      {% else %}
-		      <a href="/page{{ paginator.previous_page }}/" title="Newer Posts"><i class="icon-step-backward"></i> Newer Posts</a>
-		      {% endif %}
-		    {% endif %}
-
-		    {% if paginator.next_page %} 
-		    <a href="/page{{ paginator.next_page }}/" title="Older Posts">Older Posts <i class="icon-step-forward"></i></a>
-		    {% endif %} 
-		  </nav>
         <ul class="pager">
 			{% if paginator.next_page %} 
 			<li class="previous">
@@ -35,9 +22,12 @@ title: Cole The Coder
 			{% if paginator.previous_page %}
 				{% if paginator.previous_page == 1 %}
 					<li class="next">
-						<a href="/page{{ paginator.previous_page }}/">Newer &rarr;</a>
+						<a href="/">Newer &rarr;</a>
 					</li>
 				{% else %}
+					<li class="next">
+						<a href="/page{{ paginator.previous_page }}/">Newer &rarr;</a>
+					</li>
 				{% endif %}
 			{% endif %}
 		</ul>
