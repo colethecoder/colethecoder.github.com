@@ -52,7 +52,11 @@
             </p>
             <ul class="nav">
               <li class="active"><a href="{{ site.root_url }}">Home</a></li>
-              <li><a href="{{ site.root_url }}/about.html">About</a></li>
+			  {% if page.title == 'About Me' %}
+				<li class="active"><a href="{{ site.root_url }}/about.html">About</a></li>
+			  {% else %}
+				<li><a href="{{ site.root_url }}/about.html">About</a></li>
+			  {% endif %}
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
