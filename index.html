@@ -9,29 +9,23 @@ title: Cole The Coder
            <p>{{ post.content }}</p>          
         </div>
 		{% endfor %}
-        <ul class="pager">
-			{% if paginator.next_page %} 
-			<li class="previous">
-				<a href="/page{{ paginator.next_page }}/">&larr; Older</a>
-			</li>
-			{% else %}
-			<li class="previous disabled">
-				&larr; Older
-			</li>
-			{% endif %}
-			{% if paginator.previous_page %}
-				{% if paginator.previous_page == 1 %}
-					<li class="next">
-						<a href="/">Newer &rarr;</a>
-					</li>
-				{% else %}
-					<li class="next">
-						<a href="/page{{ paginator.previous_page }}/">Newer &rarr;</a>
-					</li>
+		<div class="span12">
+			<ul class="pager">
+				{% if paginator.next_page %} 
+				<li class="next">
+					<a href="/page{{ paginator.next_page }}/">Older &rarr;</a>
+				</li>
 				{% endif %}
-			{% else %}
-			<li class="next disabled">
-				Newer &rarr;
-			</li>
-			{% endif %}
-		</ul>
+				{% if paginator.previous_page %}
+					{% if paginator.previous_page == 1 %}
+						<li class="previous">
+							<a href="/">&larr; Newer</a>
+						</li>
+					{% else %}
+						<li class="previous">
+							<a href="/page{{ paginator.previous_page }}/">&larr; Newer</a>
+						</li>
+					{% endif %}
+				{% endif %}
+			</ul>
+		</div>
