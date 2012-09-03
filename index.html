@@ -16,7 +16,7 @@ title: Cole The Coder
 			</li>
 			{% else %}
 			<li class="previous disabled">
-				<a href="/page{{ paginator.next_page }}/">&larr; Older</a>
+				&larr; Older
 			</li>
 			{% endif %}
 			{% if paginator.previous_page %}
@@ -29,5 +29,9 @@ title: Cole The Coder
 						<a href="/page{{ paginator.previous_page }}/">Newer &rarr;</a>
 					</li>
 				{% endif %}
+			{% else %}
+			<li class="next disabled">
+				Newer &rarr;
+			</li>
 			{% endif %}
 		</ul>
