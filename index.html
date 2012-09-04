@@ -4,9 +4,11 @@ title: Cole The Coder
 ---
 		{% for post in paginator.posts %}
         <div class="span12">
-          <h2><a href="{{ post.url }}#disqus_thread">{{ post.title }}</a></h2>
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 		  <h4>{{ post.date | date: "%B %e, %Y" }}</h4>
-           <p>{{ post.content }}</p>          
+           <p>{{ post.content }}</p>
+		   <p><a href="{{ post.url }}#disqus_thread">{{ post.title }}</a></p>
+		   <hr />
         </div>
 		{% endfor %}
 		<div class="span12">
