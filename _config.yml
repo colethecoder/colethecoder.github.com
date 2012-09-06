@@ -3,5 +3,4 @@ markdown: rdiscount
 permalink: /:year/:month/:day/:title
 paginate: 3
 root_url: "http://www.colethecoder.com"
-rdiscount
-  extensions: [smart]
+pygments: true
