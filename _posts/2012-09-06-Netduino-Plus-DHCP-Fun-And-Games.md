@@ -4,7 +4,7 @@ title: Netduino Plus DHCP Fun And Games
 ---
 
 
-{% highlight C# %}
+{% highlight c# %}
 	//Initialize Socket class
     socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
     //Request and bind to an IP from DHCP server
