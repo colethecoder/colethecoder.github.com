@@ -2,7 +2,7 @@
 layout: post
 title: Netduino Plus DHCP Fun And Games
 ---
-
+test1
 
 {% highlight csharp %}
 socket = new Socket(AddressFamily.InterNetwork,SocketType.Stream, ProtocolType.Tcp);
