@@ -10,7 +10,7 @@ markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-'''csharp
+'''c#
 socket = new Socket(AddressFamily.InterNetwork,SocketType.Stream, ProtocolType.Tcp);
 socket.Bind(new IPEndPoint(IPAddress.Any, 80));
 Debug.Print(Microsoft.SPOT.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()[0].IPAddress);
