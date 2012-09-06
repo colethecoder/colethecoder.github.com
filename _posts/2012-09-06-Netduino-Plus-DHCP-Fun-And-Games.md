@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Netduino Plus DHCP Fun And Games
+title: Netduino Plus DHCP Fun and Games
 ---
 Over the last week I've been playing around with a [Netduino Plus](http://www.netduino.com/netduinoplus/specs.htm) for a little project I've been planning for a while. It's a great little device and really easy to get started with.
 
