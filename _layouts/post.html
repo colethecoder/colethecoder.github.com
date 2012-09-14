@@ -8,7 +8,7 @@ layout: layout
 		<span class="badge badge-info">Posted {{ page.date | date: "%B %e, %Y" }}</span>
 		<p>{{ content }}</p>
 		<div class="pull-right">
-		{% for tag in post.tags %}
+		{% for tag in page.tags %}
 		   <span class="label">{{ tag }}</span>
 		{% endfor %}
 		</div>
