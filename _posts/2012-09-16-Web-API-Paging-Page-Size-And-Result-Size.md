@@ -63,7 +63,7 @@ which would give you:
 
 You can try this out with the excellent [Fiddler](http://www.fiddler2.com/fiddler2/ "http://www.fiddler2.com/fiddler2/"). Re-perform the action in the browser with Fiddler running and then drag the request into the Composer where you can manipulate and "Execute" it. This is much easier than trying to do it through the browser over and over and looking in the Inspector -> Raw views you can see exactly what's going on. I'll stick with the JSON requests for now.
 
-So once you start to dip your toes into the world of REST you'll find a lot of arguments over what is and isn't RESTful. I'm going to handle my paging in tthe querystring, I think this looks clean and feels REST-y enough for me, I'm sure other people will have differing opinions. What I want to do is be able to limit the query using a url like:
+So once you start to dip your toes into the world of REST you'll find a lot of arguments over what is and isn't RESTful. I'm going to handle my paging in the querystring, I think this looks clean and feels REST-y enough for me, I'm sure other people will have differing opinions. What I want to do is be able to limit the query using a url like:
 
 > http://[your debug server]/api/values?page=1&pageSize=2
 
