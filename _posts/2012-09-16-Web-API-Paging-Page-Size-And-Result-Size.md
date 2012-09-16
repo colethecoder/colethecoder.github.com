@@ -43,7 +43,10 @@ Accept: application/xml
 e.g.
 
 {% highlight xml %}
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays"><string>value1</string><string>value2</string></ArrayOfstring>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>value1</string>
+	<string>value2</string>
+</ArrayOfstring>
 {% endhighlight %}
 
 Or you could switch it to JSON with:
