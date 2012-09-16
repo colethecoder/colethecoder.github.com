@@ -9,3 +9,10 @@ def awesome
   "for real. I know."
 end
 {% endhighlight %}
+
+{% highlight c# %}
+public void Tester()
+{
+	string hello = "bye";
+}
+{% endhighlight %}
