@@ -17,14 +17,24 @@ socket.Listen(10);
 ListenForRequest();
 {% endhighlight %}
 
-<script src="https://gist.github.com/3660121.js"> </script>
-
 I found that every time I started debugging it always output the IP: 192.168.5.100. This is not on my router's subnet (192.168.1.xxx).
 
 After a bit of digging I found that 192.168.5.100 is in fact the Netduino's default IP address and that by being output at this point the most likely issue was that the router hadn't assigned an IP to the device. This can indicate a network configuration issue but in my case it was because it was taking a while to assign an IP (through DHCP) to the device.
 
 A quick rough tweak to the code fixed the issue by adding a while loop to wait for the IP to be assigned before starting listening.
 
-<script src="https://gist.github.com/3660432.js"> </script>
+{% highlight c# %}
+socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+socket.Bind(new IPEndPoint(IPAddress.Any, 80));
+string address =  Microsoft.SPOT.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()[0].IPAddress;
+while (address == "192.168.5.100")
+{
+    address =  Microsoft.SPOT.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces()[0].IPAddress;
+    Thread.Sleep(2000);
+}
+Debug.Print(address);
+socket.Listen(10);
+ListenForRequest();
+{% endhighlight %}
 
 Hope this saves other people time if they run into the same issue.
