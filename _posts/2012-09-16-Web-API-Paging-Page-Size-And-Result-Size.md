@@ -5,9 +5,9 @@ tags: web-api c# rest
 ---
 I've built a few RESTful APIs in recent years as an alternative to SOAP web services. Over that time it's got much easier to build them in .Net, firstly MVC v3 added the JsonResult allowing you to just return JSON simply from Controllers and more recently Web API has emerged alongside MVC v4 as a way of building this type of API really simply.
 
-One of the first things I often need to do is get some type of result paging working to support returning only parts of large result sets. The beta versions of Web API has a couple of ways of doing this either using an OData style syntax or handcrafting it through the querystring but in the final RTM version the [Queryable] attribute was dropped and [this OData support omitted](http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5 "http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5") so for now we are left with handcrafting
+One of the first things I often need to do is get some type of result paging working to support returning only parts of large result sets. The beta versions of Web API had a couple of ways of doing this, using either an OData style syntax or handcrafting it through the querystring but in the final RTM version the [Queryable] attribute was dropped and [this OData support omitted](http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5 "http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5") so for now we are left with handcrafting
 
-To do this we first need to: 
+To build a paged Web API we first need to: 
 
 * Start a new Project in VS2012
 * Choose "ASP.Net MVC 4 Web Application" 
