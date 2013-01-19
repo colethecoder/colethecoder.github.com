@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cruise Control .Net Self Updating Config
-tags: health-informatics
+tags: continuous-integration
 ---
 
 I'm a massive advocate of continuous integration (CI). I set up a build server for my team a few years ago and it really changed the way we worked for the better. Cruise Control .Net was the first CI software I used and despite flirting with the likes of TeamCity, FAKE and even TFS I always end up returning to Cruise Control because at the moment it does just enough for what I need and is easy to extend with plugins or Powershell when my requirements are a bit more complex.
