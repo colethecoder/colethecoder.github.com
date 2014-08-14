@@ -25,7 +25,7 @@ By default this file will be picking up its layout from:
 
 To incorporate Bootstrap into your Markdown pages, change  _Layout.cshtml to:
 
-{% highlight html %}
+'''html
 <!DOCTYPE html>
 <html>
 	<head>
@@ -66,11 +66,11 @@ To incorporate Bootstrap into your Markdown pages, change  _Layout.cshtml to:
             @RenderSection("scripts", required: false)
     </body>
 </html>
-{% endhighlight %}
+'''
 
 and your Doc.cshtml to:
 
-{% highlight html %}
+'''html
 @using Kiwi.Markdown
 @model Document
 
@@ -83,7 +83,7 @@ and your Doc.cshtml to:
 
     @Html.Raw(Model.Content)
 </div>
-{% endhighlight %}
+'''
 
 Now adding md files to:
 
