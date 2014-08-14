@@ -1,5 +1,5 @@
 auto: true
-markdown: maruku
+markdown: kramdown
 permalink: /:year/:month/:day/:title
 paginate: 3
 root_url: "http://www.colethecoder.com"
