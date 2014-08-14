@@ -2,5 +2,5 @@ auto: true
 markdown: kramdown
 permalink: /:year/:month/:day/:title
 paginate: 3
-root_url: "http://www.colethecoder.com"
+root_url: "http://colethecoder.com"
 pygments: true
