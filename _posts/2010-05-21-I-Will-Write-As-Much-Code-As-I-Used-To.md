@@ -1,6 +1,10 @@
 ---
 layout: post
-title: I will write as much code as I used to (or how to live in complete denial)
+title: "I will write as much code as I used to"
+subtitle:   "(or how to live in complete denial)"
+date:       2010-05-21 12:00:00
+author:     "Tom Cole"
+header-img: "img/post-bg-06.jpg"
 tags:
 - Productivity
 - Management

@@ -1,6 +1,19 @@
-auto: true
+# Site settings
+title: colethecoder blog
+header-img: img/home-bg.jpg
+email: mail@colethecoder.com
+copyright_name: Tom Cole
+description: "programming, devops, cloud, iot etc..."
+baseurl: ""
+url: "http://colethecoder.com"
+twitter_username: colethecoder
+github_username:  colethecoder
+email_username:  mail@colethecoder.com
+
+# Build settings
+plugins: [jekyll-paginate, jekyll-feed]
 markdown: kramdown
-permalink: /:year/:month/:day/:title
-paginate: 3
+permalink: pretty
+paginate: 5
 root_url: "http://colethecoder.com"
-pygments: true
+highlighter: rouge

@@ -1,6 +1,11 @@
 ---
 layout: post
-title: Netduino Plus DHCP Fun and Games
+title: Netduino Plus DHCP
+subtitle:   "Device networking fun and games"
+date:       2012-09-06 12:00:00
+author:     "Tom Cole"
+header-img: "img/post-bg-07.jpg"
+creative-commons-image-url: https://www.flickr.com/photos/momentsnotice/33405102366/
 tags: netduino c#
 ---
 Over the last week I've been playing around with a [Netduino Plus](http://www.netduino.com/netduinoplus/specs.htm) for a little project I've been planning for a while. It's a great little device and really easy to get started with.
