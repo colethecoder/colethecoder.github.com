@@ -53,7 +53,7 @@
                     </li>
                     {% endif %}
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }}</p>
+                <p class="copyright text-muted">Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }} {% if page.creative-commons-image-url %} | Header photo used under creative commons license: <a href="{{ page.creative-commons-image-url }}">source</a>{% endif %}</p>
             </div>
         </div>
     </div>
