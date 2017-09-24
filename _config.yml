@@ -1,6 +1,5 @@
 # Site settings
 title: colethecoder blog
-header-img: img/home-bg.jpg
 email: mail@colethecoder.com
 copyright_name: Tom Cole
 description: "programming, devops, cloud, iot etc..."
@@ -9,6 +8,7 @@ url: "http://colethecoder.com"
 twitter_username: colethecoder
 github_username:  colethecoder
 email_username:  mail@colethecoder.com
+linkedin_username: colethecoder
 
 # Build settings
 plugins: [jekyll-paginate, jekyll-feed]

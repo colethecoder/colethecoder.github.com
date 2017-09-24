@@ -1,6 +1,11 @@
 ---
 layout: post
-title: Web API - Getting Started - Paging, Page Size and Result Size
+title: Web API - Getting Started
+subtitle:   "Paging, Page Size and Result Size"
+date:       2012-09-16 12:00:00
+author:     "Tom Cole"
+header-img: "img/cables.jpg"
+creative-commons-image-url: https://www.flickr.com/photos/ab9kt_scott/5043141711/
 tags: web-api c# rest
 ---
 I've built a few RESTful APIs in recent years as an alternative to SOAP web services. Over that time it's got much easier to build them in .Net, firstly MVC v3 added the JsonResult allowing you to just return JSON simply from Controllers and more recently Web API has emerged alongside MVC v4 as a way of building this type of API really simply.

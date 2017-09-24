@@ -1,6 +1,11 @@
 ---
 layout: post
 title: A Journey To A Better Blog
+subtitle:   "Switching to Github Pages"
+date:       2012-09-16 12:00:00
+author:     "Tom Cole"
+header-img: "img/lego.jpg"
+creative-commons-image-url: "https://www.flickr.com/photos/23119666@N03/9036398970/"
 tags: markdown jekyll twitter-bootstrap writing
 ---
 When I originally started this blog it was hosted on [Blogger](http://www.blogger.com/home "http://www.blogger.com/home") and I spent vast amounts of time tweaking it to get it just how I wanted. In fact I spent so much time tweaking it that I barely posted anything. I found myself fighting against the platform and spending my time hacking instead of publishing. I left Blogger behind and dived into writing my own blog software to host myself, I tried out [Orchard](http://orchardproject.net/ "http://orchardproject.net/"), half wrote my own in MVC but was still spending my time mucking around with code rather than blogging.

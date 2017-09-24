@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Cruise Control .Net Self Updating Config
+subtitle:   "Updating continuous integration config with validation"
+date:       2013-01-19 12:00:00
+author:     "Tom Cole"
+header-img: "img/robot.jpg"
+creative-commons-image-url: https://www.flickr.com/photos/gabrielgm/8484256612/
 tags: continuous-integration
 ---
 

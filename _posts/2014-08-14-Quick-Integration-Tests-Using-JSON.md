@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Quick Integration Tests Using JSON
+subtitle:   "Comparing serialized objects"
+date:       2014-08-14 12:00:00
+author:     "Tom Cole"
+header-img: "img/binary.jpg"
+creative-commons-image-url: https://www.flickr.com/photos/carolynwill/4407204251
 tags: tdd c# json
 ---
 

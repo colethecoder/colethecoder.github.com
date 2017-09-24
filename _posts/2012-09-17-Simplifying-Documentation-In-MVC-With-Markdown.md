@@ -1,7 +1,12 @@
 ---
 layout: post
 title: Simplifying Documentation In MVC With Markdown
+subtitle: "Implementing Kiwi.Markdown"
+date: 2012-09-17 12:00:00
+author: "Tom Cole"
+header-img: "img/typewriter.jpg"
 tags: markdown mvc twitter-bootstrap writing
+creative-commons-image-url: https://www.flickr.com/photos/rossbrimble/17016644956
 ---
 Recently I've been building an API for work with the new ASP.Net Web API features and needed to document the functionality for 3rd Party users. I defaulted to cranking open Word and started typing, but it felt clunky. As soon as I started to create a table to track version history I started to foresee the confusion often caused in keeping the documentation in sync with the version of the API. Add to that the API is likely to be used on multiple customer sites which may not all be on the same version of the software and there is a recipe for issues in the future.
 
