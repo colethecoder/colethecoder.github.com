@@ -9,11 +9,11 @@ creative-commons-image-url: https://www.flickr.com/photos/tamaleaver/2170840601
 tags: c# bot-framework cortana
 ---
 
-Whilst working with Bot Framework recently I found myself in a situation whereupon my bot worked perfectly across channels including Skype, Teams, Bot Emulator but within Cortana I'd get a strange error.
+Whilst working with Bot Framework recently I found myself in a situation whereupon my bot worked perfectly across channels including Skype, Teams and Bot Emulator but within Cortana I'd get a strange error.
 
 ![Cortana has run into a problem. Please try again later.](/img/cortana-timeout-error.jpg)
 
-The error occured after a few interactions and after displaying some search results which displayed correctly, any subsequent request resulted in the error. After wiring up Application Insights to my bot I finally generated some more interesting errors.
+The error occured after a few interactions and following showing some search results which displayed correctly, any subsequent request resulted in the error. After wiring up Application Insights to my bot I finally generated some more interesting errors.
 
 ![Exception type: Microsoft.Bot.Schema.BotTimeoutExceptionFailed method: Microsoft.Bot.ChannelConnector.BotAPI. Call to SendActivityToUserAsync failed](/img/application-insights-bot-error.jpg)
 
