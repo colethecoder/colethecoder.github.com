@@ -76,7 +76,7 @@ class Program
 
 This is a very simple query just getting 200 events within a date range with a "Measurement.Value" greater than 5. It would generate a JSON query similar to:
 
-{% highlight json %}
+{% highlight javascript %}
 {
   "headers": {
     "x-ms-client-application-name": "ChronologicalQuery",
