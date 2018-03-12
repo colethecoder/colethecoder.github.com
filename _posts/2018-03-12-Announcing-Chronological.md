@@ -33,7 +33,6 @@ and if you just want to install a package and get on with it you can get it on n
 
 Chronological is a deliberately opinionated wrapper around the API to make accessing time series data feel very familiar to .Net developers. Data in Time Series Insights can take the form of many schemas, imagine a bunch of different sensors firing lots of different readings into the same data store, as a result the API returns a very generic data structure to cope with multiple different schemas in one result set. This approach has its benefits but generally when you are querying data from an application you have some idea of the schema you will be returning. In Chronological you setup an entity class, decorate with a few attributes to reflect the schema you are expecting, connect to your environment and then run a query which returns you an IEnumerable of your entity type. A really simple query for events would look like:
 
-Create entity class:
 {% highlight c# %}
 public class TimeSeriesEntity
 {
