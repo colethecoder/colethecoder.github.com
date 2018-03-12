@@ -97,4 +97,6 @@ This is a very simple query just getting 200 events within a date range with a "
 
 Note in particular that the lambda Where clause has been transformed into the correctly structured predicateString. The nested data structure returned by the API is then parsed by Chronological into the entity class.
 
-Chronological v1.0 is currently in alpha, I intend to release a couple of betas as I receive bugs and feedback and then proper release in a few weeks. If you are interested in Time Series Insights please give Chronological a try and give me a shout on Github or Twitter if you have any problems or suggestions.
+Chronological v1.0 is currently in alpha, I intend to release a couple of betas as I receive bugs and feedback and then a proper release in a few weeks. 
+
+If you are interested in Time Series Insights please give Chronological a try and give me a shout on Github or Twitter if you have any problems or suggestions.
