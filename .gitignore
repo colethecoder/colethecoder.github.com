@@ -4,3 +4,7 @@
 # emacs stuff
 *~
 \#*
+
+#  jekyll build output
+_site
+.jekyll-cache
