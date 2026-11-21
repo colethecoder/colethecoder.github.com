@@ -10,3 +10,12 @@ updates:
    directory: "/"
    schedule:
      interval: weekly
+ # Ruby gems (Gemfile / Gemfile.lock), grouped into a single weekly PR
+ - package-ecosystem: "bundler"
+   directory: "/"
+   schedule:
+     interval: weekly
+   groups:
+     gems:
+       patterns:
+         - "*"

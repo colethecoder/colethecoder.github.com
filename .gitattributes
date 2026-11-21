@@ -1,0 +1,15 @@
+# Keep text files on LF everywhere (including Windows checkouts) so local
+# Jekyll builds match GitHub's, e.g. post excerpts split on blank lines.
+* text=auto eol=lf
+
+# Binary files: never convert
+*.jpg binary
+*.JPG binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
