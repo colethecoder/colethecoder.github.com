@@ -11,7 +11,7 @@ tags: web-api c# rest
 ---
 I've built a few RESTful APIs in recent years as an alternative to SOAP web services. Over that time it's got much easier to build them in .Net, firstly MVC v3 added the JsonResult allowing you to just return JSON simply from Controllers and more recently Web API has emerged alongside MVC v4 as a way of building this type of API really simply.
 
-One of the first things I often need to do is get some type of result paging working to support returning only parts of large result sets. The beta versions of Web API had a couple of ways of doing this, using either an OData style syntax or handcrafting it through the querystring but in the final RTM version the [Queryable] attribute was dropped and [this OData support omitted](http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5 "http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5") so for now we are left with handcrafting.
+One of the first things I often need to do is get some type of result paging working to support returning only parts of large result sets. The beta versions of Web API had a couple of ways of doing this, using either an OData style syntax or handcrafting it through the querystring but in the final RTM version the [Queryable] attribute was dropped and [this OData support omitted](https://web.archive.org/web/20121216024800/http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5 "https://web.archive.org/web/20121216024800/http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5") so for now we are left with handcrafting.
 
 To build a paged Web API we first need to: 
 
@@ -69,7 +69,7 @@ which would give you:
 ["value1","value2"]
 {% endhighlight %}
 
-You can try this out with the excellent [Fiddler](http://www.fiddler2.com/fiddler2/ "http://www.fiddler2.com/fiddler2/"). Re-perform the action in the browser with Fiddler running and then drag the request into the Composer where you can manipulate and "Execute" it. This is much easier than trying to do it through the browser over and over, and by looking in the Inspector -> Raw views you can see exactly what's going on. I'll stick with the JSON requests for now.
+You can try this out with the excellent [Fiddler](https://www.telerik.com/fiddler "https://www.telerik.com/fiddler"). Re-perform the action in the browser with Fiddler running and then drag the request into the Composer where you can manipulate and "Execute" it. This is much easier than trying to do it through the browser over and over, and by looking in the Inspector -> Raw views you can see exactly what's going on. I'll stick with the JSON requests for now.
 
 So once you start to dip your toes into the world of REST you'll find a lot of arguments over what is and isn't RESTful. I'm going to handle my paging in the querystring, I think this looks clean and feels REST-y enough for me, I'm sure other people will have differing opinions. What I want to do is be able to limit the query using a url like:
 

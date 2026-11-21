@@ -16,7 +16,7 @@ Last year Microsoft released Azure Time Series Insights, a platform for storing 
 
 The REST API is documented at: 
 
-[https://docs.microsoft.com/en-us/rest/api/time-series-insights/time-series-insights-reference-queryapi](https://docs.microsoft.com/en-us/rest/api/time-series-insights/time-series-insights-reference-queryapi)
+[https://web.archive.org/web/20180710143541/https://docs.microsoft.com/en-us/rest/api/time-series-insights/time-series-insights-reference-queryapi](https://web.archive.org/web/20180710143541/https://docs.microsoft.com/en-us/rest/api/time-series-insights/time-series-insights-reference-queryapi)
 
 There are sample apps for connecting to it at:
 

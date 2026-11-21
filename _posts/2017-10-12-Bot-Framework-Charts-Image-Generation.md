@@ -6,11 +6,11 @@ date:       2017-10-12 12:00:00
 author:     "Tom Cole"
 header-img: "img/random-number-colours.png"
 image: "/img/random-number-colours.png"
-creative-commons-image-url: https://www.flickr.com/photos/mattimattila/4199480589
+creative-commons-image-url: https://web.archive.org/web/20210617005102/https://www.flickr.com/photos/mattimattila/4199480589
 tags: c# bot-framework
 ---
 
-Building an interesting user experience through bots frequently requires the use of images, differing channels have varying capabilities and you can use the [Channel Inspector](https://docs.botframework.com/en-us/channel-inspector/channels/Skype?f=Carousel&e=example1) web page to get an idea of what these are for your target platform.
+Building an interesting user experience through bots frequently requires the use of images, differing channels have varying capabilities and you can use the [Channel Inspector](https://web.archive.org/web/20170710051848/https://docs.botframework.com/en-us/channel-inspector/channels/Skype/) web page to get an idea of what these are for your target platform.
 
 One thing all the image presentations (Hero Card, Thumbnail Card, Attachment etc) have in common is that they ask for a URL to the image. In dynamic scenarios, like generating a chart image, a web facing URL to the image is not necessarily easy. You could create a one-off URL on your web app but that might have security implications and brings caching and other potential headaches. Another option is to generate a base64 string for the image and return a data url as you might in a HTML img tag i.e.
 
