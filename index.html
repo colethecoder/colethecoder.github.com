@@ -8,15 +8,14 @@ creative-commons-image-url: "https://www.flickr.com/photos/jason_ff/1455514845/"
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
+        <h2 class="post-title">{{ post.title }}</h2>
         {% if post.subtitle %}
         <h3 class="post-subtitle">
             {{ post.subtitle }}
         </h3>
         {% endif %}
     </a>
-	<p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+	<p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
 
 </div>
 <hr>
@@ -24,6 +23,7 @@ creative-commons-image-url: "https://www.flickr.com/photos/jason_ff/1455514845/"
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
+<nav aria-label="Older and newer posts">
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
@@ -36,4 +36,5 @@ creative-commons-image-url: "https://www.flickr.com/photos/jason_ff/1455514845/"
     </li>
     {% endif %}
 </ul>
+</nav>
 {% endif %}

@@ -1,6 +1,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Lets the CSS collapse the mobile menu only when the script can open it -->
+    <script>document.documentElement.className += ' js';</script>
 
     <!-- Title, description, canonical URL and social sharing tags (jekyll-seo-tag) -->
     {% seo %}
@@ -14,17 +16,13 @@
     <meta name="fediverse:creator" content="{{ site.mastodon_handle }}">
     {% endif %}
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
-
-    <!-- Custom CSS -->
+    <!-- Site CSS -->
     <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
 
-    <!-- Pygments Github CSS -->
+    <!-- Syntax highlighting CSS -->
     <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
 

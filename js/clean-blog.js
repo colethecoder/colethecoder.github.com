@@ -1,59 +1,45 @@
 /*!
- * Clean Blog v1.0.0 (http://startbootstrap.com)
+ * Adapted from Clean Blog v1.0.0 (http://startbootstrap.com)
  * Copyright 2015 Start Bootstrap
  * Licensed under MIT (https://spdx.org/licenses/MIT)
  */
 
-// Tooltip Init
-$(function() {
-    $("[data-toggle='tooltip']").tooltip();
-});
+(function () {
+    var nav = document.querySelector('.site-nav');
+    if (!nav) return;
 
-// make all images responsive
-$(function() {
-	$("img").addClass("img-responsive");
-});
-
-// responsive tables
-$(document).ready(function() {
-	$("table").wrap("<div class='table-responsive'></div>");
-	$("table").addClass("table");
-});
-
-// responsive embed videos
-$(document).ready(function () { 
-    $('iframe[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
-	$('iframe[src*="youtube.com"]').addClass('embed-responsive-item');
-    $('iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
-	$('iframe[src*="vimeo.com"]').addClass('embed-responsive-item');
-});
-
-// Navigation Scripts to Show Header on Scroll-Up
-jQuery(document).ready(function($) {
-    var MQL = 1170;
-
-    //primary navigation slide-in effect
-    if ($(window).width() > MQL) {
-        var headerHeight = $('.navbar-custom').height();
-        $(window).on('scroll', {
-                previousTop: 0
-            },
-            function() {
-                var currentTop = $(window).scrollTop();
-                //check if user is scrolling up
-                if (currentTop < this.previousTop) {
-                    //if scrolling up...
-                    if (currentTop > 0 && $('.navbar-custom').hasClass('is-fixed')) {
-                        $('.navbar-custom').addClass('is-visible');
-                    } else {
-                        $('.navbar-custom').removeClass('is-visible is-fixed');
-                    }
-                } else {
-                    //if scrolling down...
-                    $('.navbar-custom').removeClass('is-visible');
-                    if (currentTop > headerHeight && !$('.navbar-custom').hasClass('is-fixed')) $('.navbar-custom').addClass('is-fixed');
-                }
-                this.previousTop = currentTop;
-            });
+    // Mobile menu toggle (the CSS shows the menu when aria-expanded is true)
+    var toggle = nav.querySelector('.site-nav-toggle');
+    function setOpen(open) {
+        toggle.setAttribute('aria-expanded', String(open));
     }
-});
+    toggle.addEventListener('click', function () {
+        setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            setOpen(false);
+            toggle.focus();
+        }
+    });
+
+    // Wide screens: hide the navbar when scrolling down, show it again on scroll up
+    var wide = window.matchMedia('(min-width: 1170px)');
+    var previousTop = 0;
+    window.addEventListener('scroll', function () {
+        var currentTop = window.scrollY;
+        if (wide.matches) {
+            if (currentTop < previousTop) {
+                if (currentTop > 0 && nav.classList.contains('is-fixed')) {
+                    nav.classList.add('is-visible');
+                } else {
+                    nav.classList.remove('is-visible', 'is-fixed');
+                }
+            } else {
+                nav.classList.remove('is-visible');
+                if (currentTop > nav.offsetHeight) nav.classList.add('is-fixed');
+            }
+        }
+        previousTop = currentTop;
+    }, { passive: true });
+})();
