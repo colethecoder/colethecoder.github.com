@@ -105,6 +105,6 @@ public async Task SearchNearbyMachines(IDialogContext context, IAwaitable<IMessa
 
 In this example I have set the image size to 350x350 which seems to fit nicely in the Cortana canvas for a Hero Card. I have also created a pin for the current location with the name "Current Location" and styling 21. The resulting Card looks like:
 
-![PurpleBot Screen Shot](/img/purplebot-current-location.JPG)
+![Cortana showing a PurpleBot card with a map pinned at the current location and a Nearby Machines button](/img/purplebot-current-location.JPG)
 
 Obviously this only achieves part of my current aim, I will expand on this in future posts.

@@ -30,14 +30,14 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #00758e;
 }
 a img:hover,
 a img:focus {
   cursor: zoom-in;
 }
 blockquote {
-  color: #808080;
+  color: #666666;
   font-style: italic;
 }
 hr.small {
@@ -115,14 +115,14 @@ hr.small {
   }
   .navbar-custom.is-fixed .navbar-brand:hover,
   .navbar-custom.is-fixed .navbar-brand:focus {
-    color: #0085a1;
+    color: #00758e;
   }
   .navbar-custom.is-fixed .nav li a {
     color: #404040;
   }
   .navbar-custom.is-fixed .nav li a:hover,
   .navbar-custom.is-fixed .nav li a:focus {
-    color: #0085a1;
+    color: #00758e;
   }
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -142,12 +142,27 @@ hr.small {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px;
+  position: relative;
+}
+/* Darken header photos so the white text stays readable on light images */
+.intro-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+.intro-header > .container {
+  position: relative;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 100px 0 50px;
   color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -217,7 +232,7 @@ hr.small {
 .post-preview > a:hover,
 .post-preview > a:focus {
   text-decoration: none;
-  color: #0085a1;
+  color: #00758e;
 }
 .post-preview > a > .post-title {
   font-size: 30px;
@@ -230,7 +245,7 @@ hr.small {
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {
-  color: #808080;
+  color: #666666;
   font-size: 18px;
   font-style: italic;
   margin-top: 0;
@@ -241,7 +256,7 @@ hr.small {
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: #00758e;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
@@ -272,6 +287,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
+  color: #666666;
   font-size: 14px;
   text-align: center;
   margin-bottom: 0;
@@ -321,7 +337,7 @@ footer .copyright {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #0085a1;
+  color: #00758e;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
@@ -341,8 +357,8 @@ form .row:first-child .floating-label-form-group {
 }
 .btn-default:hover,
 .btn-default:focus {
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: #00758e;
+  border: 1px solid #00758e;
   color: white;
 }
 .pager {
@@ -369,8 +385,8 @@ form .row:first-child .floating-label-form-group {
 .pager li > a:hover,
 .pager li > a:focus {
   color: white;
-  background-color: #0085a1;
-  border: 1px solid #0085a1;
+  background-color: #00758e;
+  border: 1px solid #00758e;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -383,12 +399,12 @@ form .row:first-child .floating-label-form-group {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #00758e;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #00758e;
 }
 img::selection {
   color: white;
@@ -399,5 +415,29 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #0085a1;
+  webkit-tap-highlight-color: #00758e;
+}
+
+/* Skip link: hidden until focused, then shown above the fixed navbar */
+a.skip-link:focus,
+a.skip-link:active {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 10px 15px;
+  clip: auto;
+  background-color: white;
+  color: #404040;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: underline;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#content:focus {
+  outline: none;
 }
