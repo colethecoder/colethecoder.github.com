@@ -4,7 +4,7 @@ email: mail@colethecoder.com
 copyright_name: Tom Cole
 description: "C#, Functional Programming, Cloud, SRE etc..."
 baseurl: ""
-url: "http://colethecoder.com"
+url: "https://colethecoder.com"
 twitter_username: colethecoder
 github_username:  colethecoder
 email_username:  mail@colethecoder.com
@@ -15,5 +15,5 @@ plugins: [jekyll-paginate, jekyll-feed]
 markdown: kramdown
 permalink: pretty
 paginate: 5
-root_url: "http://colethecoder.com"
+root_url: "https://colethecoder.com"
 highlighter: rouge
