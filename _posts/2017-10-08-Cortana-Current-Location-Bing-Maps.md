@@ -96,7 +96,7 @@ public async Task SearchNearbyMachines(IDialogContext context, IAwaitable<IMessa
     }
     else
     {
-        // Do something for none location-aware channels
+        // Do something for non-location-aware channels
         
         await context.PostAsync($"I don't know where you are");
     }

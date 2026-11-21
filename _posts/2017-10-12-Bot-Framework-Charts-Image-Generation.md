@@ -94,7 +94,7 @@ public async Task GetChart(IDialogContext context, IAwaitable<IMessageActivity> 
             Title = "Chart",
             Subtitle = "Demo"
         };
-    card.Images = new List<CardImage> {new CardImage(url: chartDataUrl};
+    card.Images = new List<CardImage> {new CardImage(url: chartDataUrl)};
     var attachment = new Attachment(contentType: HeroCard.ContentType, content: card);    
     message.Attachments.Add(attachment);
 
@@ -117,7 +117,7 @@ public async Task GetChart(IDialogContext context, IAwaitable<IMessageActivity> 
     var chartDataUrl = GetLineChart(data, "Chart Title"); 
 
     var message = context.MakeMessage();    
-    var attachment = new Attachment(contentType: "image/png", contentUrl: url);
+    var attachment = new Attachment(contentType: "image/png", contentUrl: chartDataUrl);
     message.Attachments.Add(attachment);
 
     await context.PostAsync(message);

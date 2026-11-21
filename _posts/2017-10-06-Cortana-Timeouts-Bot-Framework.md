@@ -14,11 +14,11 @@ Whilst working with Bot Framework recently I found myself in a situation whereup
 
 ![Cortana has run into a problem. Please try again later.](/img/cortana-timeout-error.jpg)
 
-The error occured after a few interactions and following showing some search results which displayed correctly, any subsequent request resulted in the error. After wiring up Application Insights to my bot I finally generated some more interesting errors.
+The error occurred after a few interactions and following showing some search results which displayed correctly, any subsequent request resulted in the error. After wiring up Application Insights to my bot I finally generated some more interesting errors.
 
 ![Exception type: Microsoft.Bot.Schema.BotTimeoutExceptionFailed method: Microsoft.Bot.ChannelConnector.BotAPI. Call to SendActivityToUserAsync failed](/img/application-insights-bot-error.jpg)
 
-This gave me a bit of a clue about where the problem was, somewhere in the conversation Bot Framework is failing to send information to the Cortana backend. This lead me to revisit my code and look at each message being sent. What followed was some rather clumsy trial and error tweaks to isolate the problem message. Finally I discovered that the problem was sending two messages to Cortana in quick succession.
+This gave me a bit of a clue about where the problem was, somewhere in the conversation Bot Framework is failing to send information to the Cortana backend. This led me to revisit my code and look at each message being sent. What followed was some rather clumsy trial and error tweaks to isolate the problem message. Finally I discovered that the problem was sending two messages to Cortana in quick succession.
 
 {% highlight c# %}
 [LuisIntent("SearchMachines")]

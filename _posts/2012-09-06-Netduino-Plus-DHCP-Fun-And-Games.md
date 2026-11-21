@@ -13,7 +13,7 @@ Over the last week I've been playing around with a [Netduino Plus](http://www.ne
 
 The first project I tried was to create a little webserver and I found a great "hello world" example here: [http://netduinohacking.blogspot.co.uk/2011/03/netduino-plus-web-server-hello-world.html](http://netduinohacking.blogspot.co.uk/2011/03/netduino-plus-web-server-hello-world.html)
 
-The tutorial is pretty thorough but I ran into an interesting problem when outputting the assigned IP address out to the debug console while the device was attached to my router via ethernet via the code below:
+The tutorial is pretty thorough but I ran into an interesting problem when outputting the assigned IP address to the debug console while the device was attached to my router via ethernet via the code below:
  
 {% highlight c# %}
 socket = new Socket(AddressFamily.InterNetwork,SocketType.Stream, ProtocolType.Tcp);

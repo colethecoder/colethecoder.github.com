@@ -19,7 +19,7 @@ To include in a Web API project (I've assumed the Razor view engine) you can sta
 PM> Install-Package Kiwi.Markdown
 {% endhighlight %}
 
-to keep it nicely formatted I also threw in Twitter Bootstrap:
+To keep it nicely formatted I also threw in Twitter Bootstrap:
 
 {% highlight text %}
 PM> Install-Package Twitter.Bootstrap

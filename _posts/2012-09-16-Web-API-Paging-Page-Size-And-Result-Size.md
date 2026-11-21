@@ -11,7 +11,7 @@ tags: web-api c# rest
 ---
 I've built a few RESTful APIs in recent years as an alternative to SOAP web services. Over that time it's got much easier to build them in .Net, firstly MVC v3 added the JsonResult allowing you to just return JSON simply from Controllers and more recently Web API has emerged alongside MVC v4 as a way of building this type of API really simply.
 
-One of the first things I often need to do is get some type of result paging working to support returning only parts of large result sets. The beta versions of Web API had a couple of ways of doing this, using either an OData style syntax or handcrafting it through the querystring but in the final RTM version the [Queryable] attribute was dropped and [this OData support omitted](http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5 "http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5") so for now we are left with handcrafting
+One of the first things I often need to do is get some type of result paging working to support returning only parts of large result sets. The beta versions of Web API had a couple of ways of doing this, using either an OData style syntax or handcrafting it through the querystring but in the final RTM version the [Queryable] attribute was dropped and [this OData support omitted](http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5 "http://aspnetwebstack.codeplex.com/SourceControl/changeset/af11adf6b3c5") so for now we are left with handcrafting.
 
 To build a paged Web API we first need to: 
 
@@ -69,7 +69,7 @@ which would give you:
 ["value1","value2"]
 {% endhighlight %}
 
-You can try this out with the excellent [Fiddler](http://www.fiddler2.com/fiddler2/ "http://www.fiddler2.com/fiddler2/"). Re-perform the action in the browser with Fiddler running and then drag the request into the Composer where you can manipulate and "Execute" it. This is much easier than trying to do it through the browser over and over and looking in the Inspector -> Raw views you can see exactly what's going on. I'll stick with the JSON requests for now.
+You can try this out with the excellent [Fiddler](http://www.fiddler2.com/fiddler2/ "http://www.fiddler2.com/fiddler2/"). Re-perform the action in the browser with Fiddler running and then drag the request into the Composer where you can manipulate and "Execute" it. This is much easier than trying to do it through the browser over and over, and by looking in the Inspector -> Raw views you can see exactly what's going on. I'll stick with the JSON requests for now.
 
 So once you start to dip your toes into the world of REST you'll find a lot of arguments over what is and isn't RESTful. I'm going to handle my paging in the querystring, I think this looks clean and feels REST-y enough for me, I'm sure other people will have differing opinions. What I want to do is be able to limit the query using a url like:
 
@@ -77,7 +77,7 @@ So once you start to dip your toes into the world of REST you'll find a lot of a
 http://[your debug server]/api/values?page=1&pageSize=2
 {% endhighlight %}
 
-To do this I add a couple of optional parameters to the Get method along with default values incase they are not specified. By doing this I stop anyone ever returning the whole result set unless they intentionally do so by overriding the pageSize with a big enough number.
+To do this I add a couple of optional parameters to the Get method along with default values in case they are not specified. By doing this I stop anyone ever returning the whole result set unless they intentionally do so by overriding the pageSize with a big enough number.
 
 {% highlight c# %}
 
@@ -95,7 +95,7 @@ public IEnumerable<string> Get(int page = 0, int pageSize = 3)
 Debugging now I can see that:
 
 {% highlight text %}
-http://[your debug server]/api/values?page=1&pageSize=4
+http://[your debug server]/api/values?page=1&pageSize=2
 {% endhighlight %}
 
 returns:
@@ -104,7 +104,7 @@ returns:
 ["value3","value4"]
 {% endhighlight %}
 
-This is great but it does give you a bit of a problem if you want to do something based on the size of the entire result set e.g. have links for all the pages for navigation, since you would not know how many pages worth of data there was. I've seen numerous approaches for this that involve either a second call to another resource for a count or that modify the result set to add the count in. Neither feel particularly clean to me and my preference is to add it into it's own custom HTTP header, so that irrespective of the limitations you have implemented through the querystring the entire count is always available e.g.
+This is great but it does give you a bit of a problem if you want to do something based on the size of the entire result set e.g. have links for all the pages for navigation, since you would not know how many pages worth of data there was. I've seen numerous approaches for this that involve either a second call to another resource for a count or that modify the result set to add the count in. Neither feels particularly clean to me and my preference is to add it into its own custom HTTP header, so that irrespective of the limitations you have implemented through the querystring the entire count is always available e.g.
 
 {% highlight http %}
 X-Result-Count: 5
@@ -126,10 +126,10 @@ public HttpResponseMessage Get(int page = 0, int pageSize = 3)
 
 Note the return type is now a HttpResponseMessage and we wrap the data up inside it through the Request.CreateResponse. We then simply add the header and return the response.
 
-This does everything we need to simply return paged results and know the overall size the entire response message for:
+This does everything we need to simply return paged results and know the overall size. The entire response message for:
 
 {% highlight text %}
-http://[your debug server]/api/values?page=1&pageSize=4
+http://[your debug server]/api/values?page=1&pageSize=2
 {% endhighlight %}
 
 looks something like:
@@ -151,7 +151,7 @@ Content-Length: 19
 ["value3","value4"]
 {% endhighlight %}
 
-We are still left with one final awkward scenario, what if we want to retreive the result set size without any data, well we could compromise and return a single result but this seems clumsy. Fortunately there is the HTTP verb HEAD for just this sort of thing. We can implement it so that a HEAD request includes the result size parameter. Web API makes this really simply since we can just add the following method:
+We are still left with one final awkward scenario, what if we want to retrieve the result set size without any data, well we could compromise and return a single result but this seems clumsy. Fortunately there is the HTTP verb HEAD for just this sort of thing. We can implement it so that a HEAD request includes the result size parameter. Web API makes this really simple since we can just add the following method:
 
 {% highlight c# %}
 public HttpResponseMessage Head()
@@ -162,4 +162,4 @@ public HttpResponseMessage Head()
 }
 {% endhighlight %}
 
-now a HEAD request will include the X-Result-Count.
+Now a HEAD request will include the X-Result-Count.
