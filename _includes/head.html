@@ -8,6 +8,12 @@
     <!-- Feed autodiscovery (jekyll-feed) -->
     {% feed_meta %}
 
+    {% if site.mastodon_url %}
+    <!-- Mastodon: rel="me" verifies this site on the profile; fediverse:creator credits shared posts -->
+    <link rel="me" href="{{ site.mastodon_url }}">
+    <meta name="fediverse:creator" content="{{ site.mastodon_handle }}">
+    {% endif %}
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 

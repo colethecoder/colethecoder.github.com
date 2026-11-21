@@ -5,7 +5,8 @@ copyright_name: Tom Cole
 description: "C#, Functional Programming, Cloud, SRE etc..."
 baseurl: ""
 url: "https://colethecoder.com"
-twitter_username: colethecoder
+mastodon_handle: "@colethecoder@hachyderm.io"
+mastodon_url: "https://hachyderm.io/@colethecoder"
 github_username:  colethecoder
 email_username:  mail@colethecoder.com
 linkedin_username: colethecoder
@@ -13,9 +14,6 @@ linkedin_username: colethecoder
 # jekyll-seo-tag
 locale: en_GB
 author: Tom Cole
-twitter:
-  username: colethecoder
-  card: summary_large_image
 
 # Build settings
 plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag]

@@ -441,3 +441,13 @@ a.skip-link:active {
 #content:focus {
   outline: none;
 }
+
+/* Inline SVG icons inside a Font Awesome stack (e.g. Mastodon, which FA 4 lacks) */
+.fa-stack .stack-svg {
+  width: 1em;
+  height: 1em;
+  top: 50%;
+  left: 50%;
+  margin: -0.5em 0 0 -0.5em;
+  fill: currentColor;
+}
