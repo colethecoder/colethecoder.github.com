@@ -5,6 +5,7 @@ subtitle:   "Bot Framework, Cortana and Bing Maps"
 date:       2017-10-08 12:00:00
 author:     "Tom Cole"
 header-img: "img/globe.jpg"
+image: "/img/globe.jpg"
 creative-commons-image-url: https://www.flickr.com/photos/lukeprice88/8162093146
 tags: c# bot-framework cortana bing-maps
 ---

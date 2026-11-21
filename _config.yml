@@ -10,8 +10,15 @@ github_username:  colethecoder
 email_username:  mail@colethecoder.com
 linkedin_username: colethecoder
 
+# jekyll-seo-tag
+locale: en_GB
+author: Tom Cole
+twitter:
+  username: colethecoder
+  card: summary_large_image
+
 # Build settings
-plugins: [jekyll-paginate, jekyll-feed]
+plugins: [jekyll-paginate, jekyll-feed, jekyll-seo-tag]
 markdown: kramdown
 permalink: pretty
 paginate: 5

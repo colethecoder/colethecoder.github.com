@@ -5,6 +5,7 @@ subtitle:   "Paging, Page Size and Result Size"
 date:       2012-09-16 12:00:00
 author:     "Tom Cole"
 header-img: "img/cables.jpg"
+image: "/img/cables.jpg"
 creative-commons-image-url: https://www.flickr.com/photos/ab9kt_scott/5043141711/
 tags: web-api c# rest
 ---

@@ -5,6 +5,7 @@ subtitle:   "Switching to Github Pages"
 date:       2012-09-16 12:00:00
 author:     "Tom Cole"
 header-img: "img/lego.jpg"
+image: "/img/lego.jpg"
 creative-commons-image-url: "https://www.flickr.com/photos/23119666@N03/9036398970/"
 tags: markdown jekyll twitter-bootstrap writing
 ---

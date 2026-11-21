@@ -5,6 +5,7 @@ subtitle:   "Microsoft.Bot.Schema.BotTimeoutException / SendActivityToUserAsync 
 date:       2017-10-06 12:00:00
 author:     "Tom Cole"
 header-img: "img/bot-clock.jpg"
+image: "/img/bot-clock.jpg"
 creative-commons-image-url: https://www.flickr.com/photos/tamaleaver/2170840601
 tags: c# bot-framework cortana
 ---

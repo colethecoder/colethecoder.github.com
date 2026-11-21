@@ -5,6 +5,7 @@ subtitle:   System.Web.UI.DataVisualization.Charting and Bot Framework
 date:       2017-10-12 12:00:00
 author:     "Tom Cole"
 header-img: "img/random-number-colours.png"
+image: "/img/random-number-colours.png"
 creative-commons-image-url: https://www.flickr.com/photos/mattimattila/4199480589
 tags: c# bot-framework
 ---

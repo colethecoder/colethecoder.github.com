@@ -5,6 +5,7 @@ subtitle:   Azure Time Series Insights Client for .Net
 date:       2018-03-12 12:00:00
 author:     "Tom Cole"
 header-img: "img/clock1.jpg"
+image: "/img/clock1.jpg"
 creative-commons-image-url: https://www.flickr.com/photos/nickdun/8245237743
 tags: c# time-series-insights
 ---

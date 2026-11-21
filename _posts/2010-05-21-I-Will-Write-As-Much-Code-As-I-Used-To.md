@@ -5,6 +5,7 @@ subtitle: "(or how to live in complete denial)"
 date: 2010-05-21 12:00:00
 author: "Tom Cole"
 header-img: "img/paperwork.jpg"
+image: "/img/paperwork.jpg"
 creative-commons-image-url: "https://www.flickr.com/photos/erix/15151598439/"
 tags:
 - Productivity

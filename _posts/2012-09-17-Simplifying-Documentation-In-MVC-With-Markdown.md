@@ -5,6 +5,7 @@ subtitle: "Implementing Kiwi.Markdown"
 date: 2012-09-17 12:00:00
 author: "Tom Cole"
 header-img: "img/typewriter.jpg"
+image: "/img/typewriter.jpg"
 tags: markdown mvc twitter-bootstrap writing
 creative-commons-image-url: https://www.flickr.com/photos/rossbrimble/17016644956
 ---
