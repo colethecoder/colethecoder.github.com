@@ -8,3 +8,5 @@
 #  jekyll build output
 _site
 .jekyll-cache
+# windows stuff
+Thumbs.db
