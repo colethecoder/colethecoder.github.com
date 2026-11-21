@@ -1,68 +1,192 @@
 /*
- * GitHub style for Pygments syntax highlighter, for use with Jekyll
- * Courtesy of GitHub.com
+ * Syntax highlighting for Rouge (Jekyll's highlighter).
+ *
+ * Light: GitHub style for Pygments, courtesy of GitHub.com. Used on screen in light
+ * mode and always when printing.
+ * Dark: Rouge's github.dark theme (rougify style github.dark), with the background
+ * left to clean-blog.css and the diff heading blue lightened for contrast.
  */
 
-.highlight .hll { background-color: #ffffcc; }
-.highlight .c { color: #6a6a5f; font-style: italic; }
-.highlight .err { color: #a61717; background-color: #e3d2d2; }
-.highlight .k { font-weight: bold; }
-.highlight .o { font-weight: bold; }
-.highlight .cm { color: #6a6a5f; font-style: italic; }
-.highlight .cp { color: #666666; font-weight: bold; }
-.highlight .c1 { color: #6a6a5f; font-style: italic; }
-.highlight .cs { color: #666666; font-weight: bold; font-style: italic; }
-.highlight .gd { color: #000000; background-color: #ffdddd; }
-.highlight .gd .x { color: #000000; background-color: #ffaaaa; }
-.highlight .ge { font-style: italic; }
-.highlight .gr { color: #aa0000; }
-.highlight .gh { color: #666666; }
-.highlight .gi { color: #000000; background-color: #ddffdd; }
-.highlight .gi .x { color: #000000; background-color: #aaffaa; }
-.highlight .go { color: #888888; }
-.highlight .gp { color: #555555; }
-.highlight .gs { font-weight: bold; }
-.highlight .gu { color: #800080; font-weight: bold; }
-.highlight .gt { color: #aa0000; }
-.highlight .kc { font-weight: bold; }
-.highlight .kd { font-weight: bold; }
-.highlight .kn { font-weight: bold; }
-.highlight .kp { font-weight: bold; }
-.highlight .kr { font-weight: bold; }
-.highlight .kt { color: #445588; font-weight: bold; }
-.highlight .m { color: #009999; }
-.highlight .s { color: #dd1144; }
-.highlight .n { color: #333333; }
-.highlight .na { color: teal; }
-.highlight .nb { color: #0086b3; }
-.highlight .nc { color: #445588; font-weight: bold; }
-.highlight .no { color: teal; }
-.highlight .ni { color: purple; }
-.highlight .ne { color: #990000; font-weight: bold; }
-.highlight .nf { color: #990000; font-weight: bold; }
-.highlight .nn { color: #555555; }
-.highlight .nt { color: navy; }
-.highlight .nv { color: teal; }
-.highlight .ow { font-weight: bold; }
-.highlight .w { color: #bbbbbb; }
-.highlight .mf { color: #009999; }
-.highlight .mh { color: #009999; }
-.highlight .mi { color: #009999; }
-.highlight .mo { color: #009999; }
-.highlight .sb { color: #dd1144; }
-.highlight .sc { color: #dd1144; }
-.highlight .sd { color: #dd1144; }
-.highlight .s2 { color: #dd1144; }
-.highlight .se { color: #dd1144; }
-.highlight .sh { color: #dd1144; }
-.highlight .si { color: #dd1144; }
-.highlight .sx { color: #dd1144; }
-.highlight .sr { color: #009926; }
-.highlight .s1 { color: #dd1144; }
-.highlight .ss { color: #990073; }
-.highlight .bp { color: #666666; }
-.highlight .vc { color: teal; }
-.highlight .vg { color: teal; }
-.highlight .vi { color: teal; }
-.highlight .il { color: #009999; }
-.highlight .gc { color: #666666; background-color: #EAF2F5; }
+@media not screen and (prefers-color-scheme: dark) {
+  .highlight .hll { background-color: #ffffcc; }
+  .highlight .c { color: #6a6a5f; font-style: italic; }
+  .highlight .k { font-weight: bold; }
+  .highlight .o { font-weight: bold; }
+  .highlight .cm { color: #6a6a5f; font-style: italic; }
+  .highlight .cp { color: #666666; font-weight: bold; }
+  .highlight .c1 { color: #6a6a5f; font-style: italic; }
+  .highlight .cs { color: #666666; font-weight: bold; font-style: italic; }
+  .highlight .gd { color: #000000; background-color: #ffdddd; }
+  .highlight .gd .x { color: #000000; background-color: #ffaaaa; }
+  .highlight .ge { font-style: italic; }
+  .highlight .gr { color: #aa0000; }
+  .highlight .gh { color: #666666; }
+  .highlight .gi { color: #000000; background-color: #ddffdd; }
+  .highlight .gi .x { color: #000000; background-color: #aaffaa; }
+  .highlight .go { color: #888888; }
+  .highlight .gp { color: #555555; }
+  .highlight .gs { font-weight: bold; }
+  .highlight .gu { color: #800080; font-weight: bold; }
+  .highlight .gt { color: #aa0000; }
+  .highlight .kc { font-weight: bold; }
+  .highlight .kd { font-weight: bold; }
+  .highlight .kn { font-weight: bold; }
+  .highlight .kp { font-weight: bold; }
+  .highlight .kr { font-weight: bold; }
+  .highlight .kt { color: #445588; font-weight: bold; }
+  .highlight .m { color: #009999; }
+  .highlight .s { color: #dd1144; }
+  .highlight .n { color: #333333; }
+  .highlight .na { color: teal; }
+  .highlight .nb { color: #0086b3; }
+  .highlight .nc { color: #445588; font-weight: bold; }
+  .highlight .no { color: teal; }
+  .highlight .ni { color: purple; }
+  .highlight .ne { color: #990000; font-weight: bold; }
+  .highlight .nf { color: #990000; font-weight: bold; }
+  .highlight .nn { color: #555555; }
+  .highlight .nt { color: navy; }
+  .highlight .nv { color: teal; }
+  .highlight .ow { font-weight: bold; }
+  .highlight .w { color: #bbbbbb; }
+  .highlight .mf { color: #009999; }
+  .highlight .mh { color: #009999; }
+  .highlight .mi { color: #009999; }
+  .highlight .mo { color: #009999; }
+  .highlight .sb { color: #dd1144; }
+  .highlight .sc { color: #dd1144; }
+  .highlight .sd { color: #dd1144; }
+  .highlight .s2 { color: #dd1144; }
+  .highlight .se { color: #dd1144; }
+  .highlight .sh { color: #dd1144; }
+  .highlight .si { color: #dd1144; }
+  .highlight .sx { color: #dd1144; }
+  .highlight .sr { color: #009926; }
+  .highlight .s1 { color: #dd1144; }
+  .highlight .ss { color: #990073; }
+  .highlight .bp { color: #666666; }
+  .highlight .vc { color: teal; }
+  .highlight .vg { color: teal; }
+  .highlight .vi { color: teal; }
+  .highlight .il { color: #009999; }
+  .highlight .gc { color: #666666; background-color: #EAF2F5; }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .highlight, .highlight .w {
+    color: #c9d1d9;
+  }
+  .highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+    color: #ff7b72;
+  }
+  .highlight .gr {
+    color: #f0f6fc;
+  }
+  .highlight .gd {
+    color: #ffdcd7;
+    background-color: #67060c;
+  }
+  .highlight .nb {
+    color: #ffa657;
+  }
+  .highlight .nc {
+    color: #ffa657;
+  }
+  .highlight .no {
+    color: #ffa657;
+  }
+  .highlight .nn {
+    color: #ffa657;
+  }
+  .highlight .sr {
+    color: #7ee787;
+  }
+  .highlight .na {
+    color: #7ee787;
+  }
+  .highlight .nt {
+    color: #7ee787;
+  }
+  .highlight .gi {
+    color: #aff5b4;
+    background-color: #033a16;
+  }
+  .highlight .ges {
+    font-weight: bold;
+    font-style: italic;
+  }
+  .highlight .kc {
+    color: #79c0ff;
+  }
+  .highlight .l, .highlight .ld, .highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+    color: #79c0ff;
+  }
+  .highlight .sb {
+    color: #79c0ff;
+  }
+  .highlight .bp {
+    color: #79c0ff;
+  }
+  .highlight .ne {
+    color: #79c0ff;
+  }
+  .highlight .nl {
+    color: #79c0ff;
+  }
+  .highlight .py {
+    color: #79c0ff;
+  }
+  .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
+    color: #79c0ff;
+  }
+  .highlight .o, .highlight .ow {
+    color: #79c0ff;
+  }
+  .highlight .gh {
+    color: #58a6ff;
+    font-weight: bold;
+  }
+  .highlight .gu {
+    color: #58a6ff;
+    font-weight: bold;
+  }
+  .highlight .s, .highlight .sa, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .sx, .highlight .s1, .highlight .ss {
+    color: #a5d6ff;
+  }
+  .highlight .nd {
+    color: #d2a8ff;
+  }
+  .highlight .nf, .highlight .fm {
+    color: #d2a8ff;
+  }
+  .highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cp, .highlight .cpf, .highlight .c1, .highlight .cs {
+    color: #8b949e;
+  }
+  .highlight .gl {
+    color: #8b949e;
+  }
+  .highlight .gt {
+    color: #8b949e;
+  }
+  .highlight .ni {
+    color: #c9d1d9;
+  }
+  .highlight .si {
+    color: #c9d1d9;
+  }
+  .highlight .ge {
+    color: #c9d1d9;
+    font-style: italic;
+  }
+  .highlight .gs {
+    color: #c9d1d9;
+    font-weight: bold;
+  }
+}
+
+/* Rouge marks text it can't parse (single header lines, Razor syntax) as an error;
+   in these posts that's never a real mistake, so show it as plain code */
+.highlight .err {
+  color: inherit;
+  background-color: transparent;
+}

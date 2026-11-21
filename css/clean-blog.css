@@ -8,14 +8,51 @@
  */
 
 :root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --surface: #ffffff;         /* boxes on the page: pager links, skip link */
   --text: #404040;
   --muted: #666666;
   --accent: #00758e;
-  --rule: #eeeeee;
+  --on-accent: #ffffff;       /* text drawn on an accent background */
+  --rule: #eeeeee;            /* hr, blockquote bar */
+  --border: #dddddd;          /* box and table borders */
+  --nav-border: #e7e7e7;
+  --nav-fixed: rgba(255, 255, 255, 0.9);
+  --nav-fixed-border: #f2f2f2;
+  --code-bg: #f8f8f8;
+  --code-border: #cccccc;
+  --code-inline: #c7254e;
+  --code-inline-bg: #f9f2f4;
   --sans: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --serif: 'Lora', 'Times New Roman', serif;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace;
   --measure: 42rem; /* about 70 characters of body text */
+}
+
+/* Dark mode follows the reader's system setting. Print always uses the light colours. */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18191c;
+    --surface: #222428;
+    --text: #dcdcdc;
+    --muted: #a6a6a6;
+    --accent: #4fc3d9;
+    --on-accent: #18191c;
+    --rule: #2e3035;
+    --border: #3a3d42;
+    --nav-border: #2e3035;
+    --nav-fixed: rgba(24, 25, 28, 0.9);
+    --nav-fixed-border: #2e3035;
+    --code-bg: #1f2125;
+    --code-border: #3a3d42;
+    --code-inline: #ff8fab;
+    --code-inline-bg: #2a2227;
+  }
+  /* Soften bright screenshots on a dark page */
+  .post-content img {
+    filter: brightness(0.9);
+  }
 }
 
 /* ---------- Base ---------- */
@@ -35,7 +72,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.5;
   color: var(--text);
-  background: #ffffff;
+  background: var(--bg);
   /* long unbroken words (e.g. namespaces in titles) wrap instead of widening the page */
   overflow-wrap: break-word;
 }
@@ -119,11 +156,11 @@ table {
 th,
 td {
   padding: 0.5rem;
-  border: 1px solid #dddddd;
+  border: 1px solid var(--border);
   text-align: left;
 }
 ::selection {
-  color: #ffffff;
+  color: var(--on-accent);
   text-shadow: none;
   background: var(--accent);
 }
@@ -137,8 +174,8 @@ code {
   font-family: var(--mono);
   font-size: 0.85em;
   padding: 0.1em 0.3em;
-  color: #c7254e;
-  background-color: #f9f2f4;
+  color: var(--code-inline);
+  background-color: var(--code-inline-bg);
   border-radius: 4px;
 }
 pre {
@@ -151,8 +188,8 @@ pre {
   overflow-x: auto;
   white-space: pre;
   word-wrap: normal;
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
   border-radius: 4px;
 }
 pre code {
@@ -199,7 +236,7 @@ figure.highlight {
   left: 10px;
   z-index: 1100;
   padding: 10px 15px;
-  background-color: #ffffff;
+  background-color: var(--surface);
   color: var(--text);
   font-family: var(--sans);
   font-weight: 800;
@@ -220,8 +257,8 @@ figure.highlight {
   left: 0;
   width: 100%;
   z-index: 3;
-  background: #ffffff;
-  border-bottom: 1px solid #e7e7e7;
+  background: var(--bg);
+  border-bottom: 1px solid var(--nav-border);
   font-family: var(--sans);
 }
 .site-nav-inner {
@@ -242,7 +279,7 @@ figure.highlight {
   margin: 8px 0;
   padding: 9px 10px;
   background: transparent;
-  border: 1px solid #dddddd;
+  border: 1px solid var(--border);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -318,8 +355,8 @@ figure.highlight {
   .site-nav.is-fixed {
     position: fixed;
     top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #f2f2f2;
+    background-color: var(--nav-fixed);
+    border-bottom: 1px solid var(--nav-fixed-border);
     transition: transform 0.3s;
   }
   .site-nav.is-fixed .site-nav-brand,
@@ -473,12 +510,12 @@ figure.highlight {
   letter-spacing: 1px;
   text-decoration: none;
   color: var(--text);
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
 }
 .pager a:hover,
 .pager a:focus {
-  color: #ffffff;
+  color: var(--on-accent);
   background-color: var(--accent);
   border-color: var(--accent);
   text-decoration: none;
@@ -524,12 +561,12 @@ footer {
   width: 2.875rem;
   height: 2.875rem;
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--bg);
   background-color: var(--text);
 }
 .social a:hover,
 .social a:focus {
-  color: #ffffff;
+  color: var(--on-accent);
   background-color: var(--accent);
 }
 .social svg {
