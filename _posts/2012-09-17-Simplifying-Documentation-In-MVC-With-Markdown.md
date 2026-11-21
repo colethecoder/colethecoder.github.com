@@ -15,19 +15,23 @@ I decided instead to opt for web based documentation built into the API to ease 
 
 To include in a Web API project (I've assumed the Razor view engine) you can start by using the Package Manager console:
 
-> PM> Install-Package Kiwi.Markdown
+{% highlight text %}
+PM> Install-Package Kiwi.Markdown
+{% endhighlight %}
 
 to keep it nicely formatted I also threw in Twitter Bootstrap:
 
-> PM> Install-Package Twitter.Bootstrap
+{% highlight text %}
+PM> Install-Package Twitter.Bootstrap
+{% endhighlight %}
 
 The Kiwi.Markdown package creates a new view for you for formatting the Markdown. 
 
-> Views\Wiki\Doc.cshtml
+`Views\Wiki\Doc.cshtml`
 
 By default this file will be picking up its layout from:
 
-> Views\Shared\\_Layout.cshtml
+`Views\Shared\_Layout.cshtml`
 
 To incorporate Bootstrap into your Markdown pages, change  _Layout.cshtml to:
 
@@ -93,6 +97,6 @@ and your Doc.cshtml to:
 
 Now adding md files to:
 
-> App_Data\MarkdownFiles\
+`App_Data\MarkdownFiles\`
 
 will result in nice neatly formatted good looking documentation.

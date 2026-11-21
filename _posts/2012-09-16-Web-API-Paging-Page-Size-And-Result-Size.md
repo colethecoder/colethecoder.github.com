@@ -23,7 +23,9 @@ VS will generate a new project for you and immediately give you a ValuesControll
 
 Hit F5 to debug and in the browser navigate to:
 
-> http://[your debug server]/api/values
+{% highlight text %}
+http://[your debug server]/api/values
+{% endhighlight %}
 
 This will do a GET request which goes through the ValuesController and hits the method:
 
@@ -71,7 +73,9 @@ You can try this out with the excellent [Fiddler](http://www.fiddler2.com/fiddle
 
 So once you start to dip your toes into the world of REST you'll find a lot of arguments over what is and isn't RESTful. I'm going to handle my paging in the querystring, I think this looks clean and feels REST-y enough for me, I'm sure other people will have differing opinions. What I want to do is be able to limit the query using a url like:
 
-> http://[your debug server]/api/values?page=1&pageSize=2
+{% highlight text %}
+http://[your debug server]/api/values?page=1&pageSize=2
+{% endhighlight %}
 
 To do this I add a couple of optional parameters to the Get method along with default values incase they are not specified. By doing this I stop anyone ever returning the whole result set unless they intentionally do so by overriding the pageSize with a big enough number.
 
@@ -90,7 +94,9 @@ public IEnumerable<string> Get(int page = 0, int pageSize = 3)
 
 Debugging now I can see that:
 
-> http://[your debug server]/api/values?page=1&pageSize=4
+{% highlight text %}
+http://[your debug server]/api/values?page=1&pageSize=4
+{% endhighlight %}
 
 returns:
 
@@ -122,7 +128,9 @@ Note the return type is now a HttpResponseMessage and we wrap the data up inside
 
 This does everything we need to simply return paged results and know the overall size the entire response message for:
 
-> http://[your debug server]/api/values?page=1&pageSize=4
+{% highlight text %}
+http://[your debug server]/api/values?page=1&pageSize=4
+{% endhighlight %}
 
 looks something like:
 
